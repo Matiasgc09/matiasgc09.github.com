@@ -1,0 +1,213 @@
+/* Paleta de colores y variables globales */
+:root {
+    --primary: #000000;   /* negro para encabezados y elementos destacados */
+    --secondary: #3c3b3b; /* fondo oscuro para el cuerpo de la página */
+    --accent: #5593d3;    /* azul neón para detalles y resaltes */
+    --text: #292727;      /* gris muy claro casi blanco para el texto principal */
+    --muted: #292727;     /* gris suave para textos secundarios */
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--secondary);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+header h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
+.banner {
+    background-color: var(--accent);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 20px;
+}
+
+.card {
+    background-color: #edeaea;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+h3.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+/* Estudios timeline */
+.timeline {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: -11px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--primary);
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -21px;
+    top: 6px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #5593d3;
+}
+
+.timeline-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.timeline-item .date {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.timeline-item ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Experiencia profesional */
+.job {
+    margin-bottom: 30px;
+}
+
+.job h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.job .date {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.job .subprojects {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 8px;
+}
+
+.job .subprojects li {
+    margin-bottom: 6px;
+}
+
+.job p {
+    margin-left: 0;
+}
+
+/*(foto y contacto) */
+aside {
+    background-color: #edeaea;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.avatar {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.contact-info h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--primary);
+}
+
+.contact-info p {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.social-links ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.social-links li {
+    margin-top: 12px;
+}
+
+.social-links a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    aside {
+        margin-top: 20px;
+    }
+}
